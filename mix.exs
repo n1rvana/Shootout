@@ -17,8 +17,8 @@ defmodule Shootout.Mixfile do
   # { :foobar, "~> 0.1", git: "https://github.com/elixir-lang/foobar.git" }
   defp deps do
     [
-#      { :json, github: "cblage/elixir-json"}
-      { :jazz, github: "meh/jazz"}
+      { :json, github: "cblage/elixir-json"}
+#      { :jazz, github: "meh/jazz"}
     ]
   end
 end

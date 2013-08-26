@@ -40,3 +40,15 @@ After a long time, we get this error.
 	    /Users/nirvana/projects/shootout/deps/json/lib/json/encode.ex:56: JSON.Encode.List.to_json/1
 	    /Users/nirvana/projects/shootout/deps/json/lib/json/encode.ex:61: JSON.Encode.List.encode_item/1
 	    /private/tmp/elixir-01o6/elixir-0.10.1/lib/elixir/lib/enum.ex:639: Enum.to_binary/2
+
+One Elixir 10.2-dev I get:
+
+	** (UndefinedFunctionError) undefined function: Binary.Chars.to_binary/1
+	    Binary.Chars.to_binary(4)
+	    deps/json/lib/json/encode.ex:80: JSON.Encode.Number.to_json/1
+	    deps/json/lib/json/encode.ex:61: JSON.Encode.List.encode_item/1
+	    /Users/nirvana/github/elixir/lib/elixir/lib/enum.ex:1388: Enum."-map_join/3-fun-0-"/4
+	    /Users/nirvana/github/elixir/lib/elixir/lib/enum.ex:1715: Enumerable.List.reduce/3
+	    deps/json/lib/json/encode.ex:56: JSON.Encode.List.to_json/1
+	    deps/json/lib/json/encode.ex:29: JSON.Encode.to_json/1
+	    deps/json/lib/json/encode.ex:61: JSON.Encode.List.encode_item/1
