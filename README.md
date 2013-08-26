@@ -25,6 +25,21 @@ Immediately gives this error.
 	    erl_eval.erl:569: :erl_eval.do_apply/6
 	    src/elixir.erl:147: :elixir.eval_forms/3
 
+Under 10.2-dev I get this issue:
+
+	Interactive Elixir (0.10.2-dev) - press Ctrl+C to exit (type h() ENTER for help)
+	iex(1)> Shootout.timed_run
+	Preparing to test encoding and decoding.
+	Test file loaded, test begins...
+	** (UndefinedFunctionError) undefined function: :ok.__record__/1
+	    :ok.__record__(:fields)
+	    /Users/nirvana/projects/json_shootout/deps/jazz/lib/json/encoder.ex:195: JSON.Encoder.Tuple.to_json/2
+	    /Users/nirvana/projects/json_shootout/deps/jazz/lib/json/encoder.ex:11: JSON.Encode.it/2
+	    lib/shootout.ex:10: Shootout.timed_run/0
+	    erl_eval.erl:569: :erl_eval.do_apply/6
+	    src/elixir.erl:138: :elixir.eval_forms/3
+
+
 ### Error from elixir-json:
 After a long time, we get this error.
 
