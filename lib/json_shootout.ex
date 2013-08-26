@@ -1,0 +1,2 @@
+defmodule JsonShootout do
+end
