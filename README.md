@@ -12,7 +12,7 @@ Test data from: http://www.json-generator.com
 	iex(1)> Shootout.timed_run
 
 
-![results chart](https://github.com/n1rvana/Shootout/blob/master/chart.jpg "Results")
+![results chart](https://raw.github.com/n1rvana/Shootout/blob/master/chart.jpg "Results")
 ### Results from jsex: (Elixir wrapper around jsx)
 
 "test.json" Results: Decode: 0.107636s Encode: 0.14087s
