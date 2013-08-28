@@ -20,7 +20,7 @@ Times in Seconds. Blue is Encode, Green is Decode. 500k file "test.json"
 
 "test.json" Results: Decode: 0.107636s Encode: 0.14087s
 
-### Results from jazz: (Pure Elixir)
+### Results from jazz: (Elixir + Elrang yecc)
 
 "test.json" Results: Decode: 0.211439s Encode: 0.086853s
 
