@@ -11,59 +11,10 @@ Test data from: http://www.json-generator.com
 	Interactive Elixir (0.10.1) - press Ctrl+C to exit (type h() ENTER for help)
 	iex(1)> Shootout.timed_run
 
-### Error from jazz:
-Immediately gives this error.
+### Results from jazz:
 
-	iex(1)> Shootout.timed_run
-	Preparing to test encoding and decoding.
-	Test file loaded, test begins...
-	** (UndefinedFunctionError) undefined function: :ok.__record__/1
-	    :ok.__record__(:fields)
-	    /Users/nirvana/projects/json_shootout/deps/jazz/lib/json/encoder.ex:195: JSON.Encoder.Tuple.to_json/2
-	    /Users/nirvana/projects/json_shootout/deps/jazz/lib/json/encoder.ex:11: JSON.Encode.it/2
-	    /Users/nirvana/projects/shootout/lib/shootout.ex:10: Shootout.timed_run/0
-	    erl_eval.erl:569: :erl_eval.do_apply/6
-	    src/elixir.erl:147: :elixir.eval_forms/3
+"test.json" Results: Decode: 0.211439s Encode: 0.086853s
 
-Under 10.2-dev I get this issue:
+### Results from elixir-json:
 
-	Interactive Elixir (0.10.2-dev) - press Ctrl+C to exit (type h() ENTER for help)
-	iex(1)> Shootout.timed_run
-	Preparing to test encoding and decoding.
-	Test file loaded, test begins...
-	** (UndefinedFunctionError) undefined function: :ok.__record__/1
-	    :ok.__record__(:fields)
-	    /Users/nirvana/projects/json_shootout/deps/jazz/lib/json/encoder.ex:195: JSON.Encoder.Tuple.to_json/2
-	    /Users/nirvana/projects/json_shootout/deps/jazz/lib/json/encoder.ex:11: JSON.Encode.it/2
-	    lib/shootout.ex:10: Shootout.timed_run/0
-	    erl_eval.erl:569: :erl_eval.do_apply/6
-	    src/elixir.erl:138: :elixir.eval_forms/3
-
-
-### Error from elixir-json:
-After a long time, we get this error.
-
-	iex(1)> Shootout.timed_run
-	Preparing to test encoding and decoding.
-	Test file loaded, test begins...
-	** (FunctionClauseError) no function clause matching in Enumerable.List.reduce/3
-	    /private/tmp/elixir-01o6/elixir-0.10.1/lib/elixir/lib/enum.ex:1521: Enumerable.List.reduce(1, "\"id\"", #Function<12.2075665 in Enum.map_join/3>)
-	    /Users/nirvana/projects/shootout/deps/json/lib/json/encode.ex:56: JSON.Encode.List.to_json/1
-	    /Users/nirvana/projects/shootout/deps/json/lib/json/encode.ex:61: JSON.Encode.List.encode_item/1
-	    /private/tmp/elixir-01o6/elixir-0.10.1/lib/elixir/lib/enum.ex:639: Enum.to_binary/2
-	    /private/tmp/elixir-01o6/elixir-0.10.1/lib/elixir/lib/enum.ex:1522: Enumerable.List.reduce/3
-	    /Users/nirvana/projects/shootout/deps/json/lib/json/encode.ex:56: JSON.Encode.List.to_json/1
-	    /Users/nirvana/projects/shootout/deps/json/lib/json/encode.ex:61: JSON.Encode.List.encode_item/1
-	    /private/tmp/elixir-01o6/elixir-0.10.1/lib/elixir/lib/enum.ex:639: Enum.to_binary/2
-
-One Elixir 10.2-dev I get:
-
-	** (UndefinedFunctionError) undefined function: Binary.Chars.to_binary/1
-	    Binary.Chars.to_binary(4)
-	    deps/json/lib/json/encode.ex:80: JSON.Encode.Number.to_json/1
-	    deps/json/lib/json/encode.ex:61: JSON.Encode.List.encode_item/1
-	    /Users/nirvana/github/elixir/lib/elixir/lib/enum.ex:1388: Enum."-map_join/3-fun-0-"/4
-	    /Users/nirvana/github/elixir/lib/elixir/lib/enum.ex:1715: Enumerable.List.reduce/3
-	    deps/json/lib/json/encode.ex:56: JSON.Encode.List.to_json/1
-	    deps/json/lib/json/encode.ex:29: JSON.Encode.to_json/1
-	    deps/json/lib/json/encode.ex:61: JSON.Encode.List.encode_item/1
+"test.json" Results: Decode: 26.513258s Encode: 0.135068s
