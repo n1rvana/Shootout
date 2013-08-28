@@ -31,3 +31,7 @@ but without replacing my 10.1 install, I wasn't able to get it to build under 10
 Jiffy is NIF based, so the actual coding is done in C.
 
 "test.json" Results: Decode: 0.020808s Encode: 0.016446s
+
+### Results from mochijson2:
+
+"test.json" Results: Decode: 0.125149s Encode: 0.117624s
