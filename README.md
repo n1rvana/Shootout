@@ -24,4 +24,4 @@ Test data from: http://www.json-generator.com
 "test.json" Results: Decode: 26.513258s Encode: 0.135068s
 
 Note: This is the result running on 0.10.1 of elixir.  Latest elixir-json wants 10.2-dev,
-but without replacing my 10.1 install, I wasn't able to get it to build unter 10.2. 
+but without replacing my 10.1 install, I wasn't able to get it to build under 10.2. 
