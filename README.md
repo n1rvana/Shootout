@@ -12,7 +12,7 @@ Test data from: http://www.json-generator.com
 	iex(1)> Shootout.timed_run
 
 ## Results
-
+Times in Seconds. Blue is Encode, Green is Decode. 500k file "test.json"
 
 ![results chart](https://raw.github.com/n1rvana/Shootout/master/chart.jpg "Results")
 
