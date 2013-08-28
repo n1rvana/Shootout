@@ -11,8 +11,11 @@ Test data from: http://www.json-generator.com
 	Interactive Elixir (0.10.1) - press Ctrl+C to exit (type h() ENTER for help)
 	iex(1)> Shootout.timed_run
 
+## Results
+
 
 ![results chart](https://raw.github.com/n1rvana/Shootout/master/chart.jpg "Results")
+
 ### Results from jsex: (Elixir wrapper around jsx)
 
 "test.json" Results: Decode: 0.107636s Encode: 0.14087s
