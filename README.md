@@ -25,3 +25,9 @@ Test data from: http://www.json-generator.com
 
 Note: This is the result running on 0.10.1 of elixir.  Latest elixir-json wants 10.2-dev,
 but without replacing my 10.1 install, I wasn't able to get it to build under 10.2. 
+
+### Results from jiffy:
+
+Jiffy is NIF based, so the actual coding is done in C.
+
+"test.json" Results: Decode: 0.020808s Encode: 0.016446s

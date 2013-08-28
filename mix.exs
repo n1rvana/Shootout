@@ -19,8 +19,8 @@ defmodule Shootout.Mixfile do
     [
 #      { :json, github: "cblage/elixir-json"},
 #      { :jazz, github: "meh/jazz"},
-      { :jsex, github: "talentdeficit/jsex"}
-
+      { :jsex, github: "talentdeficit/jsex"},
+      {:jiffy, github: "davisp/jiffy"}
     ]
   end
 end
