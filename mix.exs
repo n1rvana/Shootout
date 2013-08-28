@@ -4,7 +4,7 @@ defmodule Shootout.Mixfile do
   def project do
     [ app: :shootout,
       version: "0.0.1",
-      elixir: "~> 0.10.1",
+      elixir: "=> 0.10.1",
       deps: deps ]
   end
 
@@ -17,7 +17,7 @@ defmodule Shootout.Mixfile do
   # { :foobar, "~> 0.1", git: "https://github.com/elixir-lang/foobar.git" }
   defp deps do
     [
-#      { :json, github: "cblage/elixir-json"},
+      { :json, github: "cblage/elixir-json"},
 #      { :jazz, github: "meh/jazz"},
       { :jsex, github: "talentdeficit/jsex"},
       {:jiffy, github: "davisp/jiffy"}

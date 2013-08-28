@@ -5,9 +5,7 @@ defmodule Shootout do
 		{:ok, binary} = File.read "test.json"
 		IO.puts "Test file loaded, test begins..."
 		json_decode_start = :erlang.now()
-#jazz		{ok, json_decode_result} = JSON.decode(binary)
-
-#elixir-json
+	    {ok, json_decode_result} = JSON.decode(binary)
 		json_decode_result = JSON.decode(binary)
 		json_decode_stop = :erlang.now()
 		json_encode_result = JSON.encode(json_decode_result)
