@@ -2,6 +2,12 @@
 
 Performance measurement for JSON encoder/decoders.
 
+This is meant to see if there were any order of magnitude, or even %50 variances in performance of elixir native codecs. 
+There are not, which means the choice of API for JSON in Elixir mostly amounts to which API you like. 
+
+If you want max performance, the NIF based Jiffy is included in the benchmarks, but NIFs have their own drawbacks. The rest of 
+the packages tested are a various mixes of elixir & erlang.
+
 Test data from: http://www.json-generator.com
 
 ### Usage
