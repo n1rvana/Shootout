@@ -6,7 +6,6 @@ defmodule Shootout do
 		IO.puts "Test file loaded, test begins..."
 		json_decode_start = :erlang.now()
 	    {ok, json_decode_result} = JSON.decode(binary)
-		json_decode_result = JSON.decode(binary)
 		json_decode_stop = :erlang.now()
 		json_encode_result = JSON.encode(json_decode_result)
 		json_encode_stop = :erlang.now()
@@ -44,7 +43,7 @@ defmodule Shootout do
 	end
 
 	def mochi do
-		IO.puts "Preparing to test JIFFY encoding and decoding."
+		IO.puts "Preparing to test mochi encoding and decoding."
 		{:ok, binary} = File.read "test.json"
 		IO.puts "Test file loaded, test begins..."
 		json_decode_start = :erlang.now()

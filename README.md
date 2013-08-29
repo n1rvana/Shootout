@@ -12,26 +12,11 @@ Test data from: http://www.json-generator.com
 	iex(1)> Shootout.timed_run
 
 ## Results
-Times in Seconds. Blue is Encode, Green is Decode. 500k file "test.json"
+Times in Seconds. Blue is Encode, Green is Decode. 500k file "test.json".
+
+Results are taken from running all encoders multiple times on the same machine in the same time period, under Elixir 10.2-dev.
+Decode times were observed to be fairly variable. A better test would be to run many iterations to collect statistical results.
+
 
 ![results chart](https://raw.github.com/n1rvana/Shootout/master/chart.jpg "Results")
 
-### Results from jsex: (Elixir wrapper around jsx)
-
-"test.json" Results: Decode: 0.107636s Encode: 0.14087s
-
-### Results from jazz: (Elixir + Elang yecc)
-
-"test.json" Results: Decode: 0.211439s Encode: 0.086853s
-
-### Results from elixir-json: (Pure Elixir)
-
-"test.json" Results: Decode: 0.215432s Encode: 0.101999s
-
-### Results from jiffy: (NIF)
-
-"test.json" Results: Decode: 0.020808s Encode: 0.016446s
-
-### Results from mochijson2: (Erlang)
-
-"test.json" Results: Decode: 0.125149s Encode: 0.117624s
