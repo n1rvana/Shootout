@@ -20,13 +20,13 @@ Times in Seconds. Blue is Encode, Green is Decode. 500k file "test.json"
 
 "test.json" Results: Decode: 0.107636s Encode: 0.14087s
 
-### Results from jazz: (Elixir + Elrang yecc)
+### Results from jazz: (Elixir + Elang yecc)
 
 "test.json" Results: Decode: 0.211439s Encode: 0.086853s
 
 ### Results from elixir-json: (Pure Elixir)
 
-"test.json" Results: Decode: 26.513258s Encode: 0.135068s
+"test.json" Results: Decode: 0.215432s Encode: 0.101999s
 
 Note: This is the result running on 0.10.1 of elixir.  Latest elixir-json wants 10.2-dev,
 but without replacing my 10.1 install, I wasn't able to get it to build under 10.2. 
