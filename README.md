@@ -28,9 +28,6 @@ Times in Seconds. Blue is Encode, Green is Decode. 500k file "test.json"
 
 "test.json" Results: Decode: 0.215432s Encode: 0.101999s
 
-Note: This is the result running on 0.10.1 of elixir.  Latest elixir-json wants 10.2-dev,
-but without replacing my 10.1 install, I wasn't able to get it to build under 10.2. 
-
 ### Results from jiffy: (NIF)
 
 "test.json" Results: Decode: 0.020808s Encode: 0.016446s
