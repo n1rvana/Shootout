@@ -56,5 +56,31 @@ defmodule Shootout do
 		IO.puts "mochi finished, Decode: #{decode_time}s Encode: #{encode_time}s"
 	end
 
+	def exon do
+		IO.puts "Preparing to test exon decoding."
+		{:ok, binary} = File.read "test.json"
+		IO.puts "Test file loaded, test begins..."
+		json_decode_start = :erlang.now()
+        json_decode_result = Exon.decode(binary)
+		json_decode_stop = :erlang.now()
+		decode_time = :timer.now_diff(json_decode_stop, json_decode_start) / 1000000
+		encode_time = 0
+		IO.puts "exon finished, Decode: #{decode_time}s Encode: #{encode_time}s"
+	end
+
+	def exjson do
+		IO.puts "Preparing to test encoding and decoding."
+		{:ok, binary} = File.read "test.json"
+		IO.puts "Test file loaded, test begins..."
+		json_decode_start = :erlang.now()
+	    json_decode_result = JSON.parse(binary)
+		json_decode_stop = :erlang.now()
+		json_encode_result = JSON.generate(json_decode_result)
+		json_encode_stop = :erlang.now()
+		decode_time = :timer.now_diff(json_decode_stop, json_decode_start) / 1000000
+		encode_time = :timer.now_diff(json_encode_stop, json_decode_stop) / 1000000
+		IO.puts "Test finished, Decode: #{decode_time}s Encode: #{encode_time}s"
+	end
+
 
 end

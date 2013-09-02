@@ -26,3 +26,7 @@ Decode times were observed to be fairly variable. A better test would be to run 
 
 ![results chart](https://raw.github.com/n1rvana/Shootout/master/chart.jpg "Results")
 
+## Notes:
+
+- Jiffy is a NIF, so the processing is done in C, giving it such fast results.
+- exon is pure elixir making it's speed quite impressive.  It doesn't do json encoding at this point, though.
