@@ -55,6 +55,7 @@ Encode/Decode Times: 13.84ms / 17.988ms
 ### exon
 {:exon, github: "betawaffle/exon"}
 
+Encode/Decode Times:  NA / 27.683ms
+
 - exon is pure elixir making it's speed quite impressive.  It doesn't do json encoding at this point, though.
 
-Encode/Decode Times:  NA / 27.683ms
